@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Aluno | FATEC</title>
+    <style>
+        /* --- Reset e Fonte Base --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* --- Card Principal (Container) --- */
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra sofisticada */
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px); /* Leve flutuação ao passar o mouse */
+        }
+
+        /* --- Cabeçalho --- */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #0078D4; /* Azul estilo Azure */
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* --- Estilos do Formulário --- */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #444;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            outline: none;
+            background-color: #fafafa;
+        }
+
+        /* Efeito de Foco nos Inputs */
+        input:focus,
+        textarea:focus {
+            border-color: #0078D4;
+            background-color: #fff;
+            box-shadow: 0 0 0 4px rgba(0, 120, 212, 0.1);
+        }
+
+        textarea {
+            resize: vertical; /* Permite redimensionar apenas verticalmente */
+        }
+
+        /* --- Botão --- */
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(90deg, #0078D4 0%, #005a9e 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 120, 212, 0.3);
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(90deg, #005a9e 0%, #004578 100%);
+            transform: translateY(-1px);
+        }
+
+        .btn-submit:active {
+            transform: translateY(1px);
+        }
+
+        /* --- Rodapé do Card --- */
+        .footer-note {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Cadastro de Aluno</h1>
+            <p>Sistema de Gestão Acadêmica - Nuvem</p>
+        </header>
+
+        <form action="/cadastrar" method="POST">
+            
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Ex: Ana Souza" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail Institucional</label>
+                <input type="email" id="email" name="email" placeholder="nome@fatec.sp.gov.br" required>
+            </div>
+
+            <div class="form-group">
+                <label for="usuario">Usuário de Acesso</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ex: anasouza" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha Segura</label>
+                <input type="password" id="senha" name="senha" placeholder="••••••••" required>
+            </div>
+
+            <div class="form-group">
+                <label for="observacao">Observações (Opcional)</label>
+                <textarea id="observacao" name="observacao" rows="3" placeholder="Detalhes adicionais..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Confirmar Cadastro</button>
+        </form>
+
+        <div class="footer-note">
+            &copy; 2025 FATEC Cotia - Computação em Nuvem
+        </div>
+    </div>
+
+</body>
+</html>
