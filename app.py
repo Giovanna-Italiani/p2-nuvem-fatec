@@ -55,7 +55,7 @@ def cadastrar():
         cursor.close()
         conn.close()
         
-        return "<h1>Sucesso! Aluno cadastrado.</h1> <a href='/'>Voltar</a>" [cite: 34]
+        return "<h1>Sucesso! Aluno cadastrado.</h1> <a href='/'>Voltar</a>"
 
     except mysql.connector.Error as err:
         return f"<h1>Erro no Banco de Dados:</h1> <p>{err}</p>"
